@@ -138,7 +138,7 @@ DefObj A-Z
 
 
 Private Const STR_DUMMY             As String = "$dummy"
-Private Const STR_OPEN_FILTER As String = "Excel Œƒº˛(*.xlsb;*.xlsx)|*.xlsb;*.xlsx|All files (*.*)|*.*"
+Private Const STR_OPEN_FILTER As String = "Excel Êñá‰ª∂(*.xlsb;*.xlsx)|*.xlsb;*.xlsx|All files (*.*)|*.*"
 Private Const STR_OPEN_TITLE        As String = "Load BIFF12 file"
 
 Private m_oZip As cZipArchive
@@ -562,7 +562,7 @@ Private Function pvTestBiff12Writer(sFile As String) As Boolean
     For lIdx = 0 To 5
         Set oStyle(lIdx) = New cBiff12CellStyle
         With oStyle(lIdx)
-            .FontName = "ÀŒÃÂ"
+            .FontName = "ÂÆã‰Ωì"
             .FontSize = 9 + lIdx
             .Bold = True
             .BorderLeftColor = CLR_GREY
@@ -577,7 +577,7 @@ Private Function pvTestBiff12Writer(sFile As String) As Boolean
     oStyle(4).WrapText = True
     With New cBiff12Writer
         '--- note: Excel's Biff12 clipboard reader cannot handle shared-strings table
-        .Init 5, True, , "÷–π˙≤‚ ‘"
+        .Init 5, True, , "‰∏≠ÂõΩÊµãËØï"
         For lRow = 0 To 10
             If lRow = 0 Then
                 .MergeCells 0, 2, 3
@@ -594,7 +594,7 @@ Private Function pvTestBiff12Writer(sFile As String) As Boolean
             .AddRow lRow
             .AddStringCell 0, "Test", oStyle(0)
             .AddStringCell 1, vbNullString, oStyle(1)
-            .AddStringCell 2, "”–µÿ”–“™…œ", oStyle(2)
+            .AddStringCell 2, "ÊúâÂú∞ÊúâË¶Å‰∏ä", oStyle(2)
             .AddNumberCell 3, Round(lRow + Timer - 60000, 3), oStyle(3)
             .AddStringCell 4, lRow & " - " & Now, oStyle(4)
         Next
@@ -632,7 +632,7 @@ Private Sub Form_Load()
     
     For i = 1 To 2
         For j = 0 To 6
-            MSHFlexGrid1.TextMatrix(0, j) = "¡–" & j
+            MSHFlexGrid1.TextMatrix(0, j) = "Âàó" & j
             MSHFlexGrid1.TextMatrix(i, j) = i & j
         Next j
     Next i
@@ -643,6 +643,7 @@ Private Sub Form_Load()
     MSHFlexGrid1.ColWidth(4) = 0
     MSHFlexGrid1.ColWidth(5) = 1800
     MSHFlexGrid1.ColWidth(6) = 3000
+    MSHFlexGrid1.TextMatrix(1, 0) = "Ê±âÂ≠óÊµãËØï"  
     MSHFlexGrid1.TextMatrix(1, 1) = "1234567890"
     MSHFlexGrid1.TextMatrix(1, 2) = "12345678901234567890"
     MSHFlexGrid1.TextMatrix(1, 6) = "12345.678"
@@ -699,6 +700,6 @@ Private Sub TreeView1_NodeClick(ByVal Node As ComctlLib.Node)
 End Sub
 
 Private Sub Form_Unload(Cancel As Integer)
-    '«Â≥˝PEEKª∫≥Â«¯∞≤»´’Û¡–
+    'Ê∏ÖÈô§PEEKÁºìÂÜ≤Âå∫ÂÆâÂÖ®ÈòµÂàó
     RollingHash 0, 0
 End Sub
