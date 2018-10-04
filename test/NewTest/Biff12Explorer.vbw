@@ -1,0 +1,10 @@
+Form1 = 305, 139, 1361, 832, , 0, 0, 0, 0, C
+mdRecordInfo = 133, 115, 1006, 808, C
+mdOpenSaveDialog = 133, 115, 1163, 808, C
+cBiff12Part = 359, 124, 1170, 817, C
+cBiff12Container = 133, 115, 1070, 808, C
+cBiff12Writer = 196, 235, 1149, 771, 
+cBiff12CellStyle = 72, 119, 1189, 812, C
+mdGlobals = 722, 137, 1666, 830, 
+cDibSection = 133, 115, 1030, 808, C
+cZipArchive = 133, 115, 1125, 808, C
